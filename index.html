@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#09090f" />
+  <title>Cosmicc World — Creator Studio</title>
+  <meta name="description" content="Cosmicc World — a free creator toolkit for scripts, voice tags and reel prompts." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">✦</span><span>COSM<span class="accent">ICC</span> WORLD</span></a>
+    <nav><a href="#script">Script Lab</a><a href="#voice">Voice Tags</a><a href="#reel">Reel Builder</a></nav>
+    <span class="status"><i></i> CREATOR TOOLKIT</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span>✧</span> YOUR CREATIVE UNIVERSE</div>
+      <h1>Ideas into <span class="gradient">impact.</span></h1>
+      <p class="hero-copy">A little creative power for your next big story.<br/>Build scripts, shape your voice and create scroll-stopping reels.</p>
+      <a class="primary-btn" href="#script">Explore the studio <span>↗</span></a>
+      <div class="hero-orbit orbit-a"></div><div class="hero-orbit orbit-b"></div>
+      <div class="hero-star star-a">✦</div><div class="hero-star star-b">✧</div>
+    </section>
+
+    <section class="section" id="script">
+      <div class="section-heading"><div><div class="eyebrow">01 / SCRIPT LAB</div><h2>Turn a topic into a <span class="accent">story.</span></h2></div><span class="section-note">PROMPT GENERATOR</span></div>
+      <div class="panel">
+        <div class="field-grid">
+          <label class="field full">Video topic or idea<textarea id="topic" rows="3" placeholder="e.g. 5 mistakes that stop a YouTube channel from growing"></textarea></label>
+          <label class="field">Content platform<select id="platform"><option>YouTube</option><option>Instagram Reels</option><option>YouTube Shorts</option><option>Facebook Reels</option></select></label>
+          <label class="field">Language<select id="language"><option>Hindi</option><option>Hinglish</option><option>English</option><option>Marathi</option></select></label>
+          <label class="field">Video duration<select id="duration"><option>30–60 seconds</option><option>60–90 seconds</option><option>3–5 minutes</option><option>8–12 minutes</option></select></label>
+          <label class="field">Tone<select id="tone"><option>Engaging and conversational</option><option>Educational and practical</option><option>Cinematic and emotional</option><option bold>Bold and high-energy</option><option>Storytelling</option></select></label>
+        </div>
+        <div class="actions"><button class="btn btn-primary" id="generateScript">Generate script prompt <span>✦</span></button><button class="btn btn-ghost" id="clearScript">Clear</button></div>
+        <div class="output-wrap hidden" id="scriptOutput"><div class="output-head"><span>✦ YOUR SCRIPT PROMPT</span><button class="copy-btn" data-copy="scriptResult">Copy ↗</button></div><pre id="scriptResult"></pre></div>
+      </div>
+    </section>
+
+    <section class="section" id="voice">
+      <div class="section-heading"><div><div class="eyebrow">02 / VOICE TAG LAB</div><h2>Give every line a <span class="accent">feeling.</span></h2></div><span class="section-note">VOICE DIRECTION</span></div>
+      <div class="panel">
+        <p class="muted">Choose a delivery style to add expressive direction tags to your voice-over.</p>
+        <div class="tag-grid" id="tagGrid">
+          <button class="tag-card selected" data-tag="[curious]" data-desc="Curious, interested delivery"><b>◉ Curious</b><small>[curious]</small></button>
+          <button class="tag-card" data-tag="[whisper]" data-desc="Soft, intimate whisper"><b>◌ Whisper</b><small>[whisper]</small></button>
+          <button class="tag-card" data-tag="[excited]" data-desc="Energetic and excited"><b>✧ Excited</b><small>[excited]</small></button>
+          <button class="tag-card" data-tag="[serious]" data-desc="Calm, serious delivery"><b>◈ Serious</b><small>[serious]</small></button>
+          <button class="tag-card" data-tag="[dramatic pause]" data-desc="Pause for dramatic effect"><b>Ⅱ Dramatic pause</b><small>[dramatic pause]</small></button>
+          <button class="tag-card" data-tag="[laughing]" data-desc="Natural, light laughter"><b>☺ Laughing</b><small>[laughing]</small></button>
+          <button class="tag-card" data-tag="[sad]" data-desc="Emotional, sad delivery"><b>♡ Sad</b><small>[sad]</small></button>
+          <button class="tag-card" data-tag="[confident]" data-desc="Clear and confident delivery"><b>✦ Confident</b><small>[confident]</small></button>
+        </div>
+        <label class="field">Your voice-over line<textarea id="voiceText" rows="3" placeholder="Type or paste your voice-over line here..."></textarea></label>
+        <div class="actions"><button class="btn btn-primary" id="applyTag">Add selected tag</button><button class="btn btn-ghost" id="copyVoice">Copy voice-over</button></div>
+        <div class="output-wrap"><div class="output-head"><span>VOICE-OVER PREVIEW</span><span class="live-dot">● READY</span></div><pre id="voicePreview">Your tagged voice-over will appear here...</pre></div>
+      </div>
+    </section>
+
+    <section class="section" id="reel">
+      <div class="section-heading"><div><div class="eyebrow">03 / MASTER REEL PROMPT</div><h2>Build your next <span class="accent">reel.</span></h2></div><span class="section-note">CREATIVE BLUEPRINT</span></div>
+      <div class="panel">
+        <div class="field-grid">
+          <label class="field full">Reel concept<input id="reelIdea" placeholder="e.g. A cinematic reveal of a new cafe"/></label>
+          <label class="field">Visual style<select id="visualStyle"><option>Cinematic realistic</option><option>3D animation</option><option>Anime inspired</option><option>Minimal and aesthetic</option><option>Documentary</option><option>Luxury commercial</option></select></label>
+          <label class="field">Aspect ratio<select id="ratio"><option>9:16 vertical</option><option>16:9 horizontal</option><option>1:1 square</option></select></label>
+          <label class="field">Mood<select id="mood"><option>Inspiring</option><option>Mysterious</option><option>Energetic</option><option>Emotional</option><option>Premium</option></select></label>
+          <label class="field">Platform<select id="reelPlatform"><option>Instagram Reels</option><option>YouTube Shorts</option><option>Facebook Reels</option></select></label>
+        </div>
+        <div class="actions"><button class="btn btn-primary" id="generateReel">Create master prompt <span>✦</span></button></div>
+        <div class="output-wrap hidden" id="reelOutput"><div class="output-head"><span>MASTER REEL PROMPT</span><button class="copy-btn" data-copy="reelResult">Copy ↗</button></div><pre id="reelResult"></pre></div>
+      </div>
+    </section>
+
+    <section class="section" id="styles">
+      <div class="section-heading"><div><div class="eyebrow">04 / STYLE CODES</div><h2>Find your visual <span class="accent">language.</span></h2></div><span class="section-note">12 CREATIVE DIRECTIONS</span></div>
+      <div class="style-grid" id="styleGrid"></div>
+    </section>
+
+    <section class="section" id="progress">
+      <div class="section-heading"><div><div class="eyebrow">05 / CREATOR CHECKLIST</div><h2>Make progress, <span class="accent">one step at a time.</span></h2></div><span class="section-note">YOUR WORKFLOW</span></div>
+      <div class="panel">
+        <div class="progress-top"><span id="progressLabel">0 of 5 completed</span><strong id="progressPercent">0%</strong></div>
+        <div class="progress-track"><div id="progressBar"></div></div>
+        <div class="checklist" id="checklist"></div>
+      </div>
+    </section>
+    <footer><a class="brand" href="#"><span class="brand-mark">✦</span><span>COSM<span class="accent">ICC</span> WORLD</span></a><p>Made for creators with big ideas. <span>✦</span></p><small>Free creator toolkit · Runs in your browser</small></footer>
+  </main>
+  <div class="toast" id="toast">Copied to clipboard!</div>
+  <script src="script.js"></script>
+</body>
+</html>
